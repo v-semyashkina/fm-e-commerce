@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="app/scss/style.css"
+		/>
+
+		<title>Frontend Mentor | E-commerce product page</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header wrapper">
+			<nav>
+				<button
+					id="btnToggle"
+					class="header__toggle-open hide-for-desktop"
+				>
+					<img
+						src="./images/icon-menu.svg"
+						alt="menu icon open"
+					/>
+				</button>
+				<a
+					href="#"
+					class="header__logo"
+					><img
+						src="./images/logo.svg"
+						alt="sneakers shop logo"
+						width="138"
+						height="20"
+				/></a>
+				<div class="header__nav hide-for-mobile">
+					<button
+						id="btnToggle"
+						class="header__toggle-close hide-for-desktop"
+					>
+						<img
+							src="./images/icon-close.svg"
+							alt="menu icon close"
+						/>
+					</button>
+					<ul class="header__links">
+						<li><a href="#">Collections</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="header__icons">
+				<button class="header__cart">
+					<svg
+						viewBox="0 0 22 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+							fill-rule="nonzero"
+						/>
+					</svg>
+					<span class="header__cart-number">0</span>
+				</button>
+
+				<a
+					href="#"
+					class="header__profile"
+				>
+					<img
+						src="./images/image-avatar.png"
+						alt="profile icon"
+						width="24"
+						height="24"
+					/>
+				</a>
+			</div>
+		</header>
+		<main class="product">
+			<div class="product__photo">
+				<div class="product__slider slider">
+					<img
+						class="product__image slides active"
+						src="./images/image-product-1.jpg"
+						alt="sneaker image 1"
+						width="445"
+						height="445"
+					/>
+
+					<img
+						class="product__image slides"
+						style="display: none"
+						src="./images/image-product-2.jpg"
+						alt="sneaker image 2"
+						width="445"
+						height="445"
+					/>
+
+					<img
+						class="product__image slides"
+						style="display: none"
+						src="./images/image-product-3.jpg"
+						alt="sneaker image 3"
+						width="445"
+						height="445"
+					/>
+
+					<img
+						class="product__image slides"
+						style="display: none"
+						src="./images/image-product-4.jpg"
+						alt="sneaker image 4"
+						width="445"
+						height="445"
+					/>
+
+					<button class="product__control controls prev hide-for-desktop">
+						<svg
+							viewBox="0 0 13 18"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M11 1 3 9l8 8"
+								stroke-width="3"
+								fill="none"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</button>
+					<button class="product__control controls next hide-for-desktop">
+						<svg
+							viewBox="0 0 13 18"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="m2 1 8 8-8 8"
+								stroke-width="3"
+								fill="none"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				<div class="product__thumbnail hide-for-mobile">
+					<div class="wrap outline">
+						<img
+							class="thumbnail muted"
+							src="./images/image-product-1-thumbnail.jpg"
+							alt="sneaker image thumbnail 1"
+							width="88"
+							height="88"
+						/>
+					</div>
+
+					<div class="wrap">
+						<img
+							class="thumbnail"
+							src="./images/image-product-2-thumbnail.jpg"
+							alt="sneaker image thumbnail 2"
+							width="88"
+							height="88"
+						/>
+					</div>
+					<div class="wrap">
+						<img
+							class="thumbnail"
+							src="./images/image-product-3-thumbnail.jpg"
+							alt="sneaker image thumbnail 3"
+							width="88"
+							height="88"
+						/>
+					</div>
+					<div class="wrap">
+						<img
+							class="thumbnail"
+							src="./images/image-product-4-thumbnail.jpg"
+							alt="sneaker image thumbnail 4"
+							width="88"
+							height="88"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div class="product__modal">
+				<div class="product__photo">
+					<div class="product__slider modal-slider">
+						<button class="product__slider-close">
+							<svg
+								width="14"
+								height="15"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+									fill-rule="evenodd"
+								/>
+							</svg>
+						</button>
+						<img
+							class="product__image modal-slides active"
+							src="./images/image-product-1.jpg"
+							alt="sneaker image 1"
+							width="445"
+							height="445"
+						/>
+
+						<img
+							class="product__image modal-slides"
+							style="display: none"
+							src="./images/image-product-2.jpg"
+							alt="sneaker image 2"
+							width="445"
+							height="445"
+						/>
+
+						<img
+							class="product__image modal-slides"
+							style="display: none"
+							src="./images/image-product-3.jpg"
+							alt="sneaker image 3"
+							width="445"
+							height="445"
+						/>
+
+						<img
+							class="product__image modal-slides"
+							style="display: none"
+							src="./images/image-product-4.jpg"
+							alt="sneaker image 4"
+							width="445"
+							height="445"
+						/>
+
+						<button class="product__control modal-controls prev">
+							<svg
+								viewBox="0 0 13 18"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M11 1 3 9l8 8"
+									stroke-width="3"
+									fill="none"
+									fill-rule="evenodd"
+								/>
+							</svg>
+						</button>
+						<button class="product__control modal-controls next">
+							<svg
+								viewBox="0 0 13 18"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="m2 1 8 8-8 8"
+									stroke-width="3"
+									fill="none"
+									fill-rule="evenodd"
+								/>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product__thumbnail hide-for-mobile">
+						<div class="wrap outline">
+							<img
+								class="modal-thumbnail muted"
+								src="./images/image-product-1-thumbnail.jpg"
+								alt="sneaker image thumbnail 1"
+								width="88"
+								height="88"
+							/>
+						</div>
+
+						<div class="wrap">
+							<img
+								class="modal-thumbnail"
+								src="./images/image-product-2-thumbnail.jpg"
+								alt="sneaker image thumbnail 2"
+								width="88"
+								height="88"
+							/>
+						</div>
+						<div class="wrap">
+							<img
+								class="modal-thumbnail"
+								src="./images/image-product-3-thumbnail.jpg"
+								alt="sneaker image thumbnail 3"
+								width="88"
+								height="88"
+							/>
+						</div>
+						<div class="wrap">
+							<img
+								class="modal-thumbnail"
+								src="./images/image-product-4-thumbnail.jpg"
+								alt="sneaker image thumbnail 4"
+								width="88"
+								height="88"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="product__details wrapper">
+				<h2 class="product__brand">Sneaker Company</h2>
+				<h1 class="product__name">Fall Limited Edition Sneakers</h1>
+				<p class="product__description">
+					These low-profile sneakers are your perfect casual wear companion.
+					Featuring a durable rubber outer sole, they’ll withstand everything
+					the weather can offer.
+				</p>
+				<div class="product__price">
+					<p class="product__price-actual">$125.00</p>
+					<p class="product__discount">50%</p>
+					<p class="product__price-old">$250.00</p>
+				</div>
+				<div class="product__add">
+					<div class="product__quantity">
+						<button class="product__quantity-change minus">
+							<img
+								src="./images/icon-minus.svg"
+								alt="minus button"
+							/>
+						</button>
+						<p class="product__quantity-number">0</p>
+						<button class="product__quantity-change plus">
+							<img
+								src="./images/icon-plus.svg"
+								alt="plus button"
+							/>
+						</button>
+					</div>
+					<button class="product__add-button button-orange">
+						<svg
+							viewBox="0 0 22 20"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+								fill-rule="nonzero"
+								role="img"
+							/></svg
+						>Add to cart
+					</button>
+				</div>
+			</div>
+		</main>
+		<section class="cart">
+			<h2 class="cart__title">Cart</h2>
+			<div class="cart__content">
+				<p class="cart__empty">Your cart is empty.</p>
+				<!-- <div class="cart__product">
+					<img
+						src="./images/image-product-1-thumbnail.jpg"
+						alt="product image thumbnail 1"
+						class="cart__product-image"
+					/>
+					<div class="cart__product-text">
+						<h3 class="cart__product-name">Fall Limited Edition Sneakers</h3>
+						<p class="cart__product-price">
+							$125.00 x 3 <span class="cart__product-total">$375</span>
+						</p>
+					</div>
+					<button class="cart__delete">
+						<img
+						
+							src="./images/icon-delete.svg"
+							alt="button delete"
+						/>
+					</button>
+				</div>
+				<button class="cart__checkout button-orange">Checkout</button> -->
+			</div>
+		</section>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+		<div class="overlay"></div>
+
+		<script src="./app/js/script.js"></script>
+	</body>
+</html>

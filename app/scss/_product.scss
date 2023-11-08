@@ -1,0 +1,272 @@
+.product {
+	margin-block-end: 88px;
+	@include breakpoint-up(large) {
+		display: flex;
+		align-items: center;
+		max-width: 1018px;
+		margin-inline: auto;
+		gap: 126px;
+	}
+
+	&__slider {
+		position: relative;
+		margin-block-end: 24px;
+
+		@include breakpoint-up(large) {
+			margin-block-end: 30px;
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+
+		@include breakpoint-up(large) {
+			width: 445px;
+			height: 445px;
+			aspect-ratio: 1 / 1;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+	}
+
+	&__control {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: $white;
+		border-radius: 50%;
+		cursor: pointer;
+
+		svg {
+			width: 9px;
+			height: 13.5px;
+			stroke: $veryDarkBlue;
+			transition: stroke 250ms ease-in-out;
+		}
+
+		&:hover {
+			svg {
+				stroke: $orange;
+			}
+		}
+	}
+
+	&__thumbnail {
+		@include breakpoint-up(large) {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			img {
+				display: block;
+				border-radius: 10px;
+				cursor: pointer;
+
+				&:hover {
+					opacity: 50%;
+				}
+			}
+
+			.muted {
+				opacity: 50%;
+			}
+
+			.outline {
+				outline: 2px solid $orange;
+				border-radius: 10px;
+			}
+
+			.wrap {
+				background-color: $white;
+				border-radius: 11px;
+			}
+		}
+	}
+
+	&__modal {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 2;
+		width: 445px;
+		height: 603px;
+		visibility: hidden;
+		opacity: 0%;
+		transition: visibility 550ms ease-in-out opacity 550ms ease-in-out;
+
+		.prev {
+			left: -17px;
+		}
+
+		.next {
+			right: -17px;
+		}
+	}
+
+	&__slider-close {
+		padding: 0;
+		margin-inline-start: auto;
+		svg {
+			fill: $white;
+			margin-block-end: 23px;
+			transition: fill 250ms ease-in-out;
+
+			&:hover {
+				fill: $orange;
+			}
+		}
+	}
+
+	&__details {
+		font-weight: 700;
+	}
+
+	&__brand {
+		font-size: 0.75rem;
+		line-height: 1;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: $orange;
+		margin-block-end: 14px;
+
+		@include breakpoint-up(large) {
+			font-size: 0.875rem;
+			letter-spacing: 0.08em;
+			margin-block-end: 19px;
+		}
+	}
+
+	&__name {
+		font-size: 1.75rem;
+		line-height: 1.14;
+		color: $veryDarkBlue;
+		margin-block-start: 0;
+		margin-block-end: 16px;
+
+		@include breakpoint-up(large) {
+			font-size: 2.75rem;
+			line-height: 1.09;
+			margin-block-end: 35px;
+		}
+	}
+
+	&__description {
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.79;
+		letter-spacing: 0.04em;
+		color: $grayishBlue;
+		margin-block-end: 30px;
+
+		@include breakpoint-up(large) {
+			font-size: 1rem;
+			line-height: 1.625;
+			letter-spacing: 0rem;
+		}
+	}
+
+	&__price {
+		display: grid;
+		grid-template-columns: 6.625rem calc(2rem + 20px) auto;
+		gap: 16px;
+		margin-block: 0 27px;
+		color: $veryDarkBlue;
+		line-height: 1.625;
+
+		@include breakpoint-up(large) {
+			grid-template-columns: 6.625rem calc(2rem + 20px);
+			grid-template-rows: repeat(2, auto);
+			row-gap: 9px;
+			margin-inline-end: 34px;
+		}
+	}
+
+	&__price-actual {
+		font-size: 1.875rem;
+		line-height: 0.87;
+	}
+
+	&__discount {
+		text-align: center;
+		color: $orange;
+		background-color: $paleOrange;
+		border-radius: 5px;
+	}
+
+	&__price-old {
+		justify-self: end;
+		text-decoration: line-through;
+		letter-spacing: 0.03em;
+
+		@include breakpoint-up(large) {
+			justify-self: start;
+			align-self: start;
+		}
+	}
+
+	&__add {
+		display: grid;
+		gap: 17px;
+		@include breakpoint-up(large) {
+			grid-template-columns: 2fr 3fr;
+			gap: 15px;
+		}
+	}
+
+	&__quantity {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		background-color: $lightGrayishBlue;
+
+		padding: 17.5px 21.5px;
+		border-radius: 10px;
+
+		button {
+			&:hover {
+				opacity: 50%;
+			}
+		}
+	}
+
+	&__quantity-minus {
+	}
+
+	&__quantity-number {
+		color: $veryDarkBlue;
+	}
+
+	&__quantity-plus {
+	}
+
+	&__add-button {
+		svg {
+			width: 17px;
+			height: 15.45px;
+			fill: $white;
+			margin-inline-end: 16px;
+		}
+	}
+}
+
+.next {
+	right: 15px;
+}
+
+.prev {
+	left: 15px;
+}
+
+.show-modal {
+	visibility: visible;
+	opacity: 100%;
+}
